@@ -1,0 +1,1505 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дизайнер штор Ольга — Пошив и оформление окон в Санкт-Петербурге</title>
+<meta name="description" content="Дизайн и пошив штор под ключ в СПб и ЛО. Предварительный расчёт стоимости онлайн. Выезд с образцами, чистый монтаж, фиксированная смета.">
+<style>
+:root {
+/* === ПАЛИТРА: Уютная комната с камином === */
+--bg-deep: #152420; /* Самый тёмный — глубина стен */
+--bg-dark: #1B2D2A; /* Основной тёмно-зелёный/синий */
+--bg-mid: #1F3531; /* Чуть светлее — для чередования секций */
+--bg-card: rgba(255,255,255,0.05); /* Полупрозрачные карточки */
+--bg-card-hover: rgba(255,255,255,0.09);
+--bg-input: rgba(255,255,255,0.07);
+
+--text-primary: #F0EBE3; /* Тёплый белый — основной текст */
+--text-muted: #8FA39E; /* Приглушённый серо-зелёный */
+--text-dim: #5E7570; /* Ещё тусклее — для подписей */
+
+--gold: #D4A853; /* Золотистый — огонь камина, свечи */
+--gold-hover: #C49A45;
+--gold-glow: rgba(212,168,83,0.15);
+--gold-soft: rgba(212,168,83,0.08);
+
+--teal: #6BC5B8; /* Бирюзовый/мятный — акцентная подушка */
+--teal-soft: rgba(107,197,184,0.1);
+
+--green: #4A7C6F; /* Зелёный — растения */
+--green-soft: rgba(74,124,111,0.2);
+
+--border: rgba(255,255,255,0.08);
+--border-hover: rgba(212,168,83,0.3);
+
+--radius: 6px;
+--shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+color: var(--text-primary);
+background: var(--bg-deep);
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+}
+
+.container {
+max-width: 1140px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+/* ==================== HEADER ==================== */
+header {
+position: fixed;
+top: 0; left: 0; right: 0;
+background: rgba(21, 36, 32, 0.85);
+backdrop-filter: blur(16px);
+border-bottom: 1px solid var(--border);
+z-index: 100;
+padding: 18px 0;
+}
+
+.nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 20px;
+font-weight: 600;
+letter-spacing: 1px;
+color: var(--text-primary);
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.logo span { color: var(--gold); font-weight: 400; }
+
+.nav-contacts {
+display: flex;
+align-items: center;
+gap: 32px;
+}
+
+.nav-phone {
+color: var(--text-primary);
+text-decoration: none;
+font-weight: 500;
+font-size: 15px;
+letter-spacing: 0.5px;
+transition: color 0.3s;
+}
+
+.nav-phone:hover { color: var(--gold); }
+
+.nav-btn {
+padding: 12px 24px;
+background: var(--gold);
+color: var(--bg-deep);
+border-radius: var(--radius);
+text-decoration: none;
+font-size: 13px;
+font-weight: 700;
+transition: all 0.3s;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.nav-btn:hover { background: var(--gold-hover); transform: translateY(-1px); }
+
+/* ==================== HERO + CALCULATOR ==================== */
+.hero {
+padding: 160px 0 100px;
+position: relative;
+background: var(--bg-dark);
+overflow: hidden;
+}
+
+/* Многослойный фон: имитация комнаты с камином */
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background:
+/* Тёплое свечение камина — снизу справа */
+radial-gradient(ellipse 60% 50% at 85% 90%, rgba(212,168,83,0.12) 0%, transparent 70%),
+/* Мягкий бирюзовый отблеск — сверху слева */
+radial-gradient(ellipse 50% 40% at 10% 20%, rgba(107,197,184,0.06) 0%, transparent 60%),
+/* Дополнительная глубина — центр */
+radial-gradient(ellipse 80% 60% at 50% 50%, rgba(27,45,42,0.5) 0%, transparent 100%);
+pointer-events: none;
+z-index: 1;
+}
+
+/* Тонкая текстура «ткани» поверх фона */
+.hero::after {
+content: '';
+position: absolute;
+inset: 0;
+background-image:
+repeating-linear-gradient(
+0deg,
+transparent,
+transparent 2px,
+rgba(255,255,255,0.008) 2px,
+rgba(255,255,255,0.008) 4px
+),
+repeating-linear-gradient(
+90deg,
+transparent,
+transparent 2px,
+rgba(255,255,255,0.005) 2px,
+rgba(255,255,255,0.005) 4px
+);
+pointer-events: none;
+z-index: 1;
+}
+
+.hero-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: center;
+position: relative;
+z-index: 2;
+}
+
+.hero-text h1 {
+font-size: clamp(38px, 4.5vw, 54px);
+line-height: 1.1;
+font-weight: 600;
+margin-bottom: 24px;
+letter-spacing: -0.5px;
+color: var(--text-primary);
+}
+
+.hero-text h1 em {
+color: var(--gold);
+font-style: normal;
+}
+
+.hero-text p {
+font-size: 18px;
+color: var(--text-muted);
+margin-bottom: 40px;
+max-width: 480px;
+line-height: 1.7;
+}
+
+.hero-stats {
+display: flex;
+gap: 48px;
+margin-top: 48px;
+padding-top: 32px;
+border-top: 1px solid var(--border);
+}
+
+.stat-item strong {
+display: block;
+font-size: 32px;
+font-weight: 600;
+color: var(--gold);
+letter-spacing: -0.5px;
+}
+
+.stat-item span {
+font-size: 12px;
+color: var(--text-dim);
+text-transform: uppercase;
+letter-spacing: 1.5px;
+margin-top: 6px;
+display: block;
+}
+
+/* ==================== CALCULATOR CARD ==================== */
+.calc-card {
+background: rgba(255,255,255,0.04);
+backdrop-filter: blur(10px);
+padding: 40px;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+box-shadow: var(--shadow);
+}
+
+.calc-card h3 {
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 8px;
+color: var(--text-primary);
+}
+
+.calc-card .subtitle {
+font-size: 14px;
+color: var(--text-muted);
+margin-bottom: 28px;
+}
+
+.form-group { margin-bottom: 20px; }
+
+.form-group label {
+display: block;
+font-size: 12px;
+font-weight: 600;
+margin-bottom: 8px;
+color: var(--text-muted);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.form-control {
+width: 100%;
+padding: 16px;
+border: 1px solid var(--border);
+border-radius: var(--radius);
+font-size: 15px;
+font-family: inherit;
+background: var(--bg-input);
+color: var(--text-primary);
+transition: all 0.3s;
+-webkit-appearance: none;
+}
+
+.form-control:focus {
+outline: none;
+border-color: var(--gold);
+background: rgba(212,168,83,0.05);
+}
+
+.form-control option {
+background: var(--bg-dark);
+color: var(--text-primary);
+}
+
+.calc-result {
+background: var(--gold-soft);
+padding: 24px;
+border-radius: var(--radius);
+margin: 28px 0;
+text-align: center;
+border: 1px solid rgba(212,168,83,0.15);
+}
+
+.calc-result .label {
+font-size: 11px;
+color: var(--text-muted);
+text-transform: uppercase;
+letter-spacing: 1.5px;
+margin-bottom: 8px;
+}
+
+.calc-result .price {
+font-size: 38px;
+font-weight: 600;
+color: var(--gold);
+letter-spacing: -1px;
+}
+
+.calc-result .note {
+font-size: 12px;
+color: var(--text-dim);
+margin-top: 12px;
+line-height: 1.5;
+}
+
+.btn-primary {
+width: 100%;
+padding: 18px;
+background: var(--gold);
+color: var(--bg-deep);
+border: none;
+border-radius: var(--radius);
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.3s;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.btn-primary:hover {
+background: var(--gold-hover);
+transform: translateY(-1px);
+box-shadow: 0 8px 24px rgba(212,168,83,0.25);
+}
+
+/* ==================== SECTIONS ==================== */
+section { padding: 100px 0; }
+
+.section-header { margin-bottom: 56px; }
+
+.section-header h2 {
+font-size: clamp(30px, 3.5vw, 42px);
+font-weight: 600;
+margin-bottom: 16px;
+letter-spacing: -0.5px;
+}
+
+.section-header h2 em {
+color: var(--gold);
+font-style: normal;
+}
+
+.section-header p {
+font-size: 18px;
+color: var(--text-muted);
+max-width: 600px;
+line-height: 1.7;
+}
+
+/* ==================== WHY US ==================== */
+.why-us {
+background: var(--bg-mid);
+position: relative;
+}
+
+/* Точечная текстура */
+.why-us::before {
+content: '';
+position: absolute;
+inset: 0;
+background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size: 20px 20px;
+pointer-events: none;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 24px;
+position: relative;
+z-index: 1;
+}
+
+.feature-card {
+padding: 36px;
+border: 1px solid var(--border);
+border-radius: var(--radius);
+background: var(--bg-card);
+transition: all 0.4s;
+}
+
+.feature-card:hover {
+border-color: var(--border-hover);
+background: var(--bg-card-hover);
+transform: translateY(-3px);
+box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+width: 48px;
+height: 48px;
+background: var(--gold-soft);
+border: 1px solid rgba(212,168,83,0.15);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+margin-bottom: 24px;
+}
+
+.feature-card h3 {
+font-size: 18px;
+margin-bottom: 12px;
+font-weight: 600;
+color: var(--text-primary);
+}
+
+.feature-card p {
+font-size: 15px;
+color: var(--text-muted);
+line-height: 1.7;
+}
+
+/* ==================== PROJECT TYPES ==================== */
+.project-types {
+background: var(--bg-dark);
+position: relative;
+}
+
+.project-types::before {
+content: '';
+position: absolute;
+inset: 0;
+background:
+radial-gradient(ellipse 40% 50% at 90% 80%, rgba(107,197,184,0.04) 0%, transparent 70%);
+pointer-events: none;
+}
+
+.types-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 24px;
+position: relative;
+z-index: 1;
+}
+
+.type-card {
+background: var(--bg-card);
+padding: 36px;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+position: relative;
+overflow: hidden;
+transition: all 0.4s;
+}
+
+.type-card:hover {
+background: var(--bg-card-hover);
+border-color: var(--border-hover);
+transform: translateY(-2px);
+}
+
+.type-num {
+position: absolute;
+top: 20px;
+right: 24px;
+font-size: 72px;
+font-weight: 700;
+color: rgba(255,255,255,0.03);
+line-height: 1;
+font-family: 'Georgia', serif;
+}
+
+.type-card h3 {
+font-size: 20px;
+margin-bottom: 16px;
+font-weight: 600;
+position: relative;
+z-index: 1;
+color: var(--text-primary);
+}
+
+.type-card p {
+font-size: 15px;
+color: var(--text-muted);
+line-height: 1.7;
+position: relative;
+z-index: 1;
+}
+
+<!-- REAL CASES -->
+<section class="cases">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Не обещаем — <em>показываем</em></h2>
+<p>Реальные проекты с площадью, сроком и бюджетом. Без приукрашивания.</p>
+</div>
+
+<div class="cases-grid">
+<div class="case-card fade-up">
+<div class="case-img">
+<img src="images/case-1.jpg" alt="Скандинавский минимализм — шторы в новостройке">
+</div>
+<div class="case-body">
+<div class="case-meta">
+<span class="case-meta-item">ЖК «Северная долина»</span>
+<span class="case-meta-item"><strong>65 м²</strong> · 2-комн.</span>
+<span class="case-meta-item">Срок: <strong>14 дней</strong></span>
+</div>
+<h3>Скандинавский минимализм</h3>
+<p>Новостройка. Лён + блэкаут, скрытый потолочный карниз. Учли расположение батарей, чтобы ткань не деформировалась.</p>
+<div class="case-budget">Бюджет «под ключ»: 48 000 ₽</div>
+</div>
+</div>
+
+<div class="case-card fade-up">
+<div class="case-img">
+<img src="images/case-2.jpg" alt="Современная классика — портьеры в старом фонде">
+</div>
+<div class="case-body">
+<div class="case-meta">
+<span class="case-meta-item">Старый фонд, Петроградка</span>
+<span class="case-meta-item"><strong>85 м²</strong> · потолки 3.6м</span>
+<span class="case-meta-item">Срок: <strong>21 день</strong></span>
+</div>
+<h3>Современная классика</h3>
+<p>Сложная геометрия окон. Классические портьеры с подхватами. Корректировка лекал под кривизну стен старого дома.</p>
+<div class="case-budget">Бюджет «под ключ»: 85 000 ₽</div>
+</div>
+</div>
+
+<div class="case-card fade-up">
+<div class="case-img">
+<img src="images/case-3.jpg" alt="Загородный дом под ключ — электрокарнизы">
+</div>
+<div class="case-body">
+<div class="case-meta">
+<span class="case-meta-item">Коттедж, Выборгское ш.</span>
+<span class="case-meta-item"><strong>120 м²</strong> · панорама</span>
+<span class="case-meta-item">Срок: <strong>30 дней</strong></span>
+</div>
+<h3>Загородный дом под ключ</h3>
+<p>6 оконных проёмов. Электрокарнизы с пультом ДУ, плотные портьеры для защиты от северного солнца и сквозняков.</p>
+<div class="case-budget">Бюджет «под ключ»: 142 000 ₽</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cases {
+background: var(--bg-mid);
+position: relative;
+}
+
+.cases::before {
+content: '';
+position: absolute;
+inset: 0;
+background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size: 20px 20px;
+pointer-events: none;
+}
+
+.cases-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+gap: 32px;
+position: relative;
+z-index: 1;
+}
+
+.case-card {
+border-radius: var(--radius);
+overflow: hidden;
+border: 1px solid var(--border);
+background: var(--bg-card);
+transition: all 0.4s;
+}
+
+.case-card:hover {
+border-color: var(--border-hover);
+box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+transform: translateY(-4px);
+}
+/* Фото проекта */
+.case-img {
+height: 260px;
+position: relative;
+overflow: hidden;
+background: linear-gradient(135deg, #2A4A44 0%, #1B3530 100%);
+}
+
+.case-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.case-card:hover .case-img img {
+transform: scale(1.05);
+}
+
+.case-body { padding: 32px; }
+
+.case-meta {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+flex-wrap: wrap;
+}
+
+.case-meta-item {
+font-size: 11px;
+color: var(--text-dim);
+background: rgba(255,255,255,0.05);
+padding: 6px 14px;
+border-radius: 20px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+border: 1px solid var(--border);
+}
+
+.case-meta-item strong {
+color: var(--teal);
+font-weight: 600;
+}
+
+.case-body h3 {
+font-size: 22px;
+margin-bottom: 12px;
+font-weight: 600;
+color: var(--text-primary);
+}
+
+.case-body p {
+font-size: 15px;
+color: var(--text-muted);
+line-height: 1.7;
+margin-bottom: 20px;
+}
+
+.case-budget {
+font-size: 18px;
+font-weight: 600;
+color: var(--gold);
+padding-top: 20px;
+border-top: 1px solid var(--border);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== ABOUT STRIP ==================== */
+
+.about-strip {
+background: var(--bg-dark);
+padding: 80px 0;
+position: relative;
+overflow: hidden;
+}
+
+.about-strip::before {
+content: '';
+position: absolute;
+inset: 0;
+background:
+radial-gradient(ellipse 50% 80% at 20% 50%, rgba(212,168,83,0.06) 0%, transparent 70%);
+pointer-events: none;
+}
+
+.about-strip .container {
+display: flex;
+align-items: center;
+gap: 60px;
+position: relative;
+z-index: 1;
+}
+
+.about-photo {
+flex: 0 0 280px;
+width: 280px;
+height: 360px;
+border-radius: var(--radius);
+background: linear-gradient(135deg, var(--green) 0%, var(--bg-dark) 100%);
+border: 1px solid var(--border);
+position: relative;
+overflow: hidden;
+box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.about-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center 20%;
+display: block;
+transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-photo:hover img {
+transform: scale(1.04);
+}
+
+.about-photo::after {
+content: '';
+position: absolute;
+bottom: 0; left: 0; right: 0;
+height: 45%;
+background: linear-gradient(to top, rgba(212,168,83,0.25), transparent);
+pointer-events: none;
+z-index: 2;
+}
+
+.about-text {
+flex: 1;
+min-width: 0;
+}
+
+.about-text h2 {
+font-size: clamp(28px, 3vw, 38px);
+font-weight: 600;
+margin-bottom: 20px;
+}
+
+/* ==================== FINAL CTA ==================== */
+.final-cta {
+background: var(--bg-deep);
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.final-cta::before {
+content: '';
+position: absolute;
+inset: 0;
+background:
+radial-gradient(ellipse 60% 60% at 50% 100%, rgba(212,168,83,0.08) 0%, transparent 60%),
+radial-gradient(ellipse 40% 40% at 20% 30%, rgba(107,197,184,0.04) 0%, transparent 60%);
+pointer-events: none;
+}
+
+.final-cta h2 {
+font-size: clamp(30px, 3.5vw, 42px);
+margin-bottom: 16px;
+font-weight: 600;
+position: relative;
+z-index: 1;
+}
+
+.final-cta h2 em { color: var(--gold); font-style: normal; }
+
+.final-cta > .container > p {
+color: var(--text-muted);
+font-size: 18px;
+margin-bottom: 48px;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+line-height: 1.7;
+position: relative;
+z-index: 1;
+}
+
+.cta-form {
+max-width: 500px;
+margin: 0 auto;
+background: rgba(255,255,255,0.04);
+backdrop-filter: blur(10px);
+padding: 40px;
+border-radius: var(--radius);
+text-align: left;
+border: 1px solid var(--border);
+box-shadow: var(--shadow);
+position: relative;
+z-index: 1;
+}
+
+.cta-form input, .cta-form textarea {
+width: 100%;
+padding: 16px;
+border: 1px solid var(--border);
+border-radius: var(--radius);
+font-size: 15px;
+margin-bottom: 16px;
+font-family: inherit;
+background: var(--bg-input);
+color: var(--text-primary);
+transition: all 0.3s;
+}
+
+.cta-form input::placeholder, .cta-form textarea::placeholder {
+color: var(--text-dim);
+}
+
+.cta-form input:focus, .cta-form textarea:focus {
+outline: none;
+border-color: var(--gold);
+background: rgba(212,168,83,0.05);
+}
+
+.cta-form textarea { resize: vertical; min-height: 80px; }
+
+.cta-form .btn-primary { margin-top: 8px; }
+
+.form-note {
+text-align: center;
+font-size: 12px;
+color: var(--text-dim);
+margin-top: 16px;
+line-height: 1.5;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+background: #0D1815;
+color: var(--text-dim);
+padding: 48px 0;
+font-size: 14px;
+border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+.footer-logo {
+color: var(--text-primary);
+font-size: 18px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.footer-logo span { color: var(--gold); }
+
+/* ==================== STICKY WHATSAPP ==================== */
+.sticky-wa {
+position: fixed;
+bottom: 32px;
+right: 32px;
+z-index: 99;
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 16px 28px;
+background: var(--teal);
+color: var(--bg-deep);
+text-decoration: none;
+border-radius: 50px;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.3px;
+box-shadow: 0 8px 32px rgba(107,197,184,0.3);
+transition: all 0.3s;
+}
+
+.sticky-wa:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 40px rgba(107,197,184,0.4);
+}
+
+.sticky-wa svg { fill: var(--bg-deep); }
+
+/* ==================== DECORATIVE ELEMENTS ==================== */
+/* Свечение-разделитель между секциями */
+.glow-divider {
+height: 1px;
+background: linear-gradient(
+90deg,
+transparent 0%,
+var(--gold) 30%,
+var(--teal) 70%,
+transparent 100%
+);
+opacity: 0.15;
+}
+
+/* ==================== ANIMATIONS ==================== */
+.fade-up {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+.hero-grid { grid-template-columns: 1fr; gap: 48px; }
+.hero { padding: 120px 0 60px; }
+.hero-stats { gap: 24px; flex-wrap: wrap; }
+.stat-item strong { font-size: 24px; }
+.nav-contacts { display: none; }
+.sticky-wa span { display: none; }
+.sticky-wa { padding: 16px; border-radius: 50%; bottom: 24px; right: 24px; }
+section { padding: 70px 0; }
+.calc-card { padding: 28px; }
+.about-strip .container {
+flex-direction: column;
+text-align: center;
+gap: 32px;
+}
+
+
+.about-text p { margin-left: auto; margin-right: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container nav">
+<a href="#" class="logo">Ольга <span>· шторы</span></a>
+
+
+
+
+<div class="nav-contacts">
+<a href="tel: +79219261771" class="nav-phone">+7 (921) 926-17-71</a>
+
+
+
+
+<a href="#calc" class="nav-btn">Рассчитать стоимость</a>
+
+
+
+
+</div>
+</div>
+</header>
+
+<!-- HERO + CALCULATOR -->
+<section class="hero" id="calc">
+<div class="container">
+<div class="hero-grid">
+<div class="hero-text">
+<h1>Дизайн и пошив штор <em>под ключ</em> в Санкт-Петербурге</h1>
+<p>От подбора ткани и 3D-эскиза до чистого монтажа. Создаём уют, который вы чувствуете с первого взгляда.</p>
+
+<div class="hero-stats">
+<div class="stat-item">
+<strong>С 2016</strong>
+<span>Работаем с интерьерами</span>
+</div>
+<div class="stat-item">
+<strong>350+</strong>
+<span>Реализованных проектов</span>
+</div>
+<div class="stat-item">
+<strong>от 25 000 ₽</strong>
+<span>Средний бюджет окна</span>
+</div>
+</div>
+</div>
+
+<!-- CALCULATOR -->
+<div class="calc-card fade-up">
+<h3>Предварительный расчёт стоимости</h3>
+<p class="subtitle">Укажите параметры — сумма пересчитается автоматически</p>
+
+<div class="form-group">
+<label>Тип помещения</label>
+<select class="form-control" id="calcRoom" onchange="calculate()">
+<option value="1">Гостиная</option>
+<option value="0.8">Спальня</option>
+<option value="0.6">Кухня</option>
+<option value="0.9">Детская</option>
+<option value="1.2">Загородный дом / Панорама</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Ширина карниза (метров)</label>
+<input type="number" class="form-control" id="calcWidth" value="3" min="1" max="10" step="0.5" oninput="calculate()">
+</div>
+
+<div class="form-group">
+<label>Категория ткани</label>
+<select class="form-control" id="calcFabric" onchange="calculate()">
+<option value="15000">Стандарт (портьерная ткань, тюль)</option>
+<option value="25000">Премиум (лён, блэкаут, сложный пошив)</option>
+<option value="40000">Люкс (дизайнерские ткани, электрокарнизы)</option>
+</select>
+</div>
+
+<div class="calc-result">
+<div class="label">Предварительная стоимость</div>
+<div class="price" id="calcPrice">45 000 ₽</div>
+<div class="note">Расчёт ориентировочный. Точная смета зависит от состава работ, фурнитуры и сложности монтажа.</div>
+</div>
+
+<button class="btn-primary" onclick="document.getElementById('finalForm').scrollIntoView({behavior:'smooth'})">Получить точную смету</button>
+</div>
+</div>
+</div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- WHY US -->
+<section class="why-us">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Почему <em>выбирают нас?</em></h2>
+<p>Мы не просто шьём ткань. Мы берём на себя всю ответственность за результат — от замера до финальной отпарки.</p>
+</div>
+
+<div class="features-grid">
+<div class="feature-card fade-up">
+<div class="feature-icon">📐</div>
+<h3>Фиксированная смета до начала работ</h3>
+<p>Определяем объём проекта и составляем детальную смету. Любые изменения предварительно обсуждаются и согласовываются.</p>
+</div>
+<div class="feature-card fade-up">
+<div class="feature-icon">🚗</div>
+<h3>Выезд дизайнера с образцами</h3>
+<p>Привозим каталоги тканей к вам домой. Примеряем при вашем освещении, прикладываем к обоям и полу. Бесплатно.</p>
+</div>
+<div class="feature-card fade-up">
+<div class="feature-icon">🧹</div>
+<h3>Чистый и аккуратный монтаж</h3>
+<p>Работаем в бахилах, используем перфораторы с пылесосом. Ваши обои, потолки и паркет останутся в идеальном состоянии.</p>
+</div>
+<div class="feature-card fade-up">
+<div class="feature-icon">👩‍💼</div>
+<h3>Один проект — один дизайнер</h3>
+<p>Ольга лично ведёт проект от замера до сдачи. Вы понимаете, что происходит, без управления исполнителями.</p>
+</div>
+<div class="feature-card fade-up">
+<div class="feature-icon">🏛</div>
+<h3>Знание петербургской специфики</h3>
+<p>Учитываем кривизну стен в старом фонде, высоту потолков в сталинках и особенности панорамных окон.</p>
+</div>
+<div class="feature-card fade-up">
+<div class="feature-icon">🛡</div>
+<h3>Гарантия на пошив и монтаж 2 года</h3>
+<p>Если ткань выцветет раньше срока или швы разойдутся — исправим за свой счёт. Без вопросов.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- PROJECT TYPES -->
+<section class="project-types">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Какой проект <em>вам нужен?</em></h2>
+<p>Адаптируем процесс под ваши задачи — будь то уютная квартира для жизни или инвестиционный объект.</p>
+</div>
+
+<div class="types-grid">
+<div class="type-card fade-up">
+<div class="type-num">1</div>
+<h3>Шторы для жизни</h3>
+<p>Дизайн → подбор тканей → пошив → чистый монтаж → готовый интерьер. Полное сопровождение для тех, кто ценит своё время.</p>
+</div>
+<div class="type-card fade-up">
+<div class="type-num">2</div>
+<h3>Недвижимость для инвестиций</h3>
+<p>Концепция → расчёт → износостойкие ткани → монтаж. Комплектация квартир для посуточной или долгосрочной аренды.</p>
+</div>
+<div class="type-card fade-up">
+<div class="type-num">3</div>
+<h3>Квартиры от застройщика</h3>
+<p>Быстрая и стильная упаковка новостроек. Готовые решения или индивидуальный пошив, чтобы квартира выглядела дорого.</p>
+</div>
+<div class="type-card fade-up">
+<div class="type-num">4</div>
+<h3>Сложные решения</h3>
+<p>Электрокарнизы, римские шторы на мансарду, скрытые ниши, blackout для спален и защита от выгорания.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- REAL CASES -->
+<section class="cases">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Не обещаем — <em>показываем</em></h2>
+<p>Реальные проекты с площадью, сроком и бюджетом. Без приукрашивания.</p>
+</div>
+
+<div class="cases-grid">
+<div class="case-card fade-up">
+<div class="case-img">
+    <img src="images/case-1.jpg" alt="Скандинавский минимализм — шторы в новостройке">
+  </div>
+
+<div class="case-body">
+<div class="case-meta">
+<span class="case-meta-item">ЖК «Северная долина»</span>
+<span class="case-meta-item"><strong>65 м²</strong> · 2-комн.</span>
+<span class="case-meta-item">Срок: <strong>14 дней</strong></span>
+</div>
+<h3>Скандинавский минимализм</h3>
+<p>Новостройка. Лён + блэкаут, скрытый потолочный карниз. Учли расположение батарей, чтобы ткань не деформировалась.</p>
+<div class="case-budget">Бюджет «под ключ»: 48 000 ₽</div>
+</div>
+</div>
+
+<div class="case-card fade-up">
+  <div class="case-img">
+    <img src="images/case-2.jpg" alt="Современная классика ">
+  </div>
+
+<div class="case-body">
+<div class="case-meta">
+<span class="case-meta-item">Старый фонд, Петроградка</span>
+<span class="case-meta-item"><strong>85 м²</strong> · потолки 3.6м</span>
+<span class="case-meta-item">Срок: <strong>21 день</strong></span>
+</div>
+<h3>Современная классика</h3>
+<p>Сложная геометрия окон. Классические портьеры с подхватами. Корректировка лекал под кривизну стен старого дома.</p>
+<div class="case-budget">Бюджет «под ключ»: 85 000 ₽</div>
+</div>
+</div>
+
+<div class="case-card fade-up">
+  <div class="case-img">
+    <img src="images/case-3.jpg" alt="Загородный дом под ключ">
+  </div>
+
+<div class="case-body">
+<div class="case-meta">
+<span class="case-meta-item">Коттедж, Выборгское ш.</span>
+<span class="case-meta-item"><strong>120 м²</strong> · панорама</span>
+<span class="case-meta-item">Срок: <strong>30 дней</strong></span>
+</div>
+<h3>Загородный дом под ключ</h3>
+<p>6 оконных проёмов. Электрокарнизы с пультом ДУ, плотные портьеры для защиты от северного солнца и сквозняков.</p>
+<div class="case-budget">Бюджет «под ключ»: 142 000 ₽</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ABOUT -->
+<section class="about-strip">
+<div class="container">
+<div class="about-photo">
+<img src="images/olga.jpg" alt="Дизайнер штор Ольга — основатель студии в Санкт-Петербурге">
+</div>
+<div class="about-text">
+<h2>Меня зовут Ольга. Я — <em>инженер вашего уюта</em></h2>
+<p>За 18 лет работы я знаю, как обойти 90% ошибок, которые допускают обычные ателье: неправильная длина, выгорание ткани, кривые складки, испорченные обои при монтаже.</p>
+<p>Лично контролирую каждый заказ — от замера до финальной отпарки парогенератором у вас дома. Со мной вы общаетесь напрямую, без менеджеров-посредников.</p>
+<div class="about-signature">— Ольга</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="glow-divider"></div>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="finalForm">
+<div class="container">
+<h2 class="fade-up">Давайте посчитаем <em>ваш проект</em></h2>
+<p class="fade-up">Оставьте заявку. Ольга лично изучит параметры, подберёт 2–3 варианта тканей и пришлёт детальную смету в WhatsApp в течение 15 минут.</p>
+
+<form class="cta-form fade-up" onsubmit="submitForm(event)">
+<input type="text" placeholder="Ваше имя" required>
+<input type="tel" placeholder="Телефон или WhatsApp" required>
+<textarea placeholder="Коротко о задаче: какая комната, есть ли особенности (высокие потолки, эркер, нужна полная темнота)?"></textarea>
+<button type="submit" class="btn-primary">Получить расчёт и консультацию</button>
+<p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных. Никакого спама.</p>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container footer-grid">
+<div class="footer-logo">Ольга <span>· шторы</span></div>
+<div>
+<p>Санкт-Петербург и Ленинградская область</p>
+<p>📞 +7 (921) 926-17-71 · ✉️ kartavtseva olga@bk.ru</p>
+</div>
+<div style="text-align: right; font-size: 12px; opacity: 0.5;">
+© 2026 Все права защищены<br>
+Дизайн и пошив штор под ключ
+</div>
+</div>
+</footer>
+
+<!-- STICKY WHATSAPP -->
+<a href="https://wa.me/78121234567" class="sticky-wa" target="_blank">
+
+
+
+
+<svg width="20" height="20" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<span>Написать в WhatsApp</span>
+</a>
+
+<script>
+// Calculator
+function calculate() {
+const room = parseFloat(document.getElementById('calcRoom').value);
+const width = parseFloat(document.getElementById('calcWidth').value) || 1;
+const fabric = parseFloat(document.getElementById('calcFabric').value);
+let total = (15000 + width * 2 * fabric) * room;
+total = Math.round(total / 1000) * 1000;
+document.getElementById('calcPrice').innerText = total.toLocaleString('ru-RU') + ' ₽';
+}
+calculate();
+
+// Form
+function submitForm(e) {
+e.preventDefault();
+const btn = e.target.querySelector('button');
+const orig = btn.innerText;
+btn.innerText = 'Отправка...';
+btn.disabled = true;
+setTimeout(() => {
+alert('Спасибо! Ольга получила вашу заявку и напишет в WhatsApp в течение 15 минут.');
+e.target.reset();
+btn.innerText = orig;
+btn.disabled = false;
+}, 1000);
+}
+
+// Scroll animations
+const obs = new IntersectionObserver((entries) => {
+entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
